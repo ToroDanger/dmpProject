@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
+    <script src="{% static 'js/js.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <body>
+        <!-- nabvaer y carusel -->
+        <header>
+    
+            <!-- inicio de nadvar -->
+            <div class="menu container" id="inicio">
+                    <img class="logo-1" src="images/LOGOSQLZO.png" alt="">
+                    <input type="checkbox"  id="menu">
+                    <label for="menu">
+                        <img src="images/menu.png" class="menu-icono" alt="">
+                    </label>
+                    <nav class="navbar">
+                        <div class="menu-1">
+                            <ul>
+                                <li> <a href="#inicio">Inicio</a></li>
+                                <li><a href="#somos">Quienes somos</a></li>
+                                
+                                <!-- carro de compras -->
+                                <li class="submenu carrito" >
+                                    <img src="images/cart-add-regular-48.png" id="" alt="">
+                                    <div id="carrito">
+                                        <table id="lista-carrito">
+                                            <thead>
+                                                <tr>
+                                                    <th>Imagen</th>
+                                                    <th>Nombre</th>
+                                                    <th>Precio</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody></tbody>
+                                        </table>
+                                        <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <img class="logo-2" src="images/LOGOSQLZO.png" height="100px" alt="">
+                        <div class="menu-2">
+                            <ul>
+                                <li><a href="login.html">iniciar sesion</a></li>
+                            </ul>
+                            <div class="socials">
+                                <a href="https://web.facebook.com/groups/950968136546516?locale=es_LA">
+                                    <div class="social">
+                                        <img src="images/s1.svg" alt="">
+                                    </div>
+                                </a>
+                                <a href="https://twitter.com/digitalesps93">
+                                    <div class="social">
+                                        <img src="images/s2.svg" alt="">
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/juegosdigitalesbaratos.cl/">
+                                    <div class="social">
+                                        <img src="images/s3.svg" alt="">
+                                    </div>
+                                </a>
+    
+                            </div>
+                        </div>
+                    </nav>
+                    
+            </div>  
+           
+            <!-- inicio del carrusel -->
+            <div class="header-content container"> 
+    
+                <div class="swiper mySwiper-1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" >
+                            <div class="slider">
+                                <div class="slider-txt">
+                                    
+                                    <h1>Sonic</h1>
+                                    <h2>Superrápido. Superdivertido. ¡Superstars!</h2>
+                                    <p class="precio">Recorre las místicas Northstar Islands en la renovación del clásico juego de plataformas 2D de acción a alta velocidad de Sonic. Juega como Sonic</p>
+                                    <div class="botones">
+                                        <a href="sonic.html" class="btn-1">Catalogo</a> 
+                                        <a href="#" class="agregar-carrito btn-1" id="lista-1" data-id="1" ><i class='bx bx-cart-add'></i></a>
+                                    </div>
+                                </div>
+                                    <div class="slider-img">
+                                        <img src="images/sonic.avif"  alt="">
+                                    </div>
+                            </div>
+                        </div>
+    
+            
+                        
+                        
+                        <div class="swiper-slide">
+                            <div class="slider">
+                                <div class="slider-txt">
+                                    <h1>Gta v</h1>
+                                    <h2  class="precio">Te damos la bienvenida a Los Santos</h2>
+                                    <p>Un joven estafador callejero, un ladrón de bancos retirado y un psicópata aterrador se ven involucrados con lo peor y más desquiciado del mundo criminal.</p>
+                                    <div class="botones">
+                                      
+                                        <a href="gta.html" class="btn-1">Catalogo</a> 
+                                        <a href="#" class="agregar-carrito btn-1" id="lista-2" data-id="1" ><i class='bx bx-cart-add'></i></a>
+                                    </div>
+                                </div>
+                                    <div class="slider-img">
+                                        <img src="images/gta1.jpeg" alt="">
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider">
+                                <div class="slider-txt">
+                                    <h1>Call Of Duty</h1>
+                                    <h2 class="precio">DESPLIÉGATE, ÁRMATE, SAQUEA Y LUCHA HASTA ALCANZAR LA VICTORIA.</h2>
+                                    <p>Sube el nivel de actividad y adéntrate al nuevo mapa, Al Mazrah, con experiencias innovadoras en la jugabilidad que atraen a todo tipo de jugadores.</p>
+                                    <div class="botones">
+                                        
+                                        <a href="COD.html" class="btn-1">Catalogo</a> 
+                                       <a href="#" class="agregar-carrito btn-1" id="lista-3" data-id="1" > <i class='bx bx-cart-add'></i></a>
+                                       <!-- <i class='bx bx-cart-add'></i> -->
+                                    </div>
+                                </div>
+                                    <div class="slider-img">
+                                        <img src="images/cod.avif" height="300px" alt="">
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </header>
+    
+        <!-- donde hago las terjetas tipo carusel -->
+        <!-- <main class="products ">
+             <div class=" container">
+    
+                <input type="radio" name="tabs" id="tab1" checked="checked" class="tabInput" value="1">
+                <label for="tab1">hambuerguesa</label>
+                <div class="tab">
+                    <div class="swiper mySwiper-2" id="swiper1">
+                        <div class="swiper-wrapper">
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food1.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>producto</h4>
+                                        <p>calidad premium</p>
+                                        <span class="price">$80.00</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food2.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>tusca</h4>
+                                        <p>lorem</p>
+                                        <span class="price">$800.00</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food3.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>batman</h4>
+                                        <p>aaaaaaaaaaa</p>
+                                        <span class="price">$60.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+    
+           
+                <div class="tab">
+                    <div class="swiper mySwiper-2" id="swiper2">
+                        <div class="swiper-wrapper">
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food4.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>producto</h4>
+                                        <p>calidad premium</p>
+                                        <span class="price">$80.00</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food5.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>tusca</h4>
+                                        <p>lorem</p>
+                                        <span class="price">$800.00</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food6.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>batman</h4>
+                                        <p>aaaaaaaaaaa</p>
+                                        <span class="price">$60.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+    
+    
+                <div class="tab">
+                    <div class="swiper mySwiper-2" id="swiper3">
+                        <div class="swiper-wrapper">
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food7.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>producto</h4>
+                                        <p>calidad premium</p>
+                                        <span class="price">$80.00</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food8.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>tusca</h4>
+                                        <p>lorem</p>
+                                        <span class="price">$800.00</span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="swiper-slide">
+                                <div class="product">
+                                    <div class="product-img">
+                                        <h4>nuevo</h4>
+                                        <img src="images/food9.png" alt="">
+                                    </div>
+                                    <div class="product-txt">
+                                        <h4>batman</h4>
+                                        <p>aaaaaaaaaaa</p>
+                                        <span class="price">$60.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+    
+             </div>
+        </main> -->
+        
+        <!-- donde dejo quienes somos y modal -->
+        <section class="info container" id="somos">
+    
+            <div class="info-img">
+                <img src="images/LOGOSQLZO.png" height="300px" alt="">
+            </div>
+            <div class="info-txt" >
+                <h2>¿quienes somos?</h2>
+                <p></p>
+                    <!--Boton-->
+                <div class="boton-modal">
+                    <label for="btn-modal">
+                        Informacion
+                    </label>
+                </div>
+                <!--Fin de Boton-->
+                <!--Ventana Modal-->
+                    <input type="checkbox" id="btn-modal">
+                    <div class="container-modal">
+                        <div class="content-modal" id="img-modal">
+                            <h3>¿Quienes somos?</h3>
+                            <p>Sqlzo es una comunidad compuesta por tres integrantes: <br>
+                                Erick Diaz <br> Benjamin Pezoa <br> Bryan Muñoz
+                            </p>
+                            <img src="images/LOGOSQLZO.png" height="150px" alt="">
+                            <div class="btn-cerrar">
+                                <label for="btn-modal">Cerrar</label>
+                            </div>
+                        </div>
+                        <label for="btn-modal" class="cerrar-modal"></label>
+                    </div>
+                <!--Fin de Ventana Modal-->
+                        
+            </div>
+    
+        </section>
+    
+        <!-- donde va la informacion de quienes somos  -->
+        <!-- <section class="horario">
+            <div class="horario-info container">
+                <h2>informacion</h2>
+                <div class="horario-txt">
+                    <div class="txt">
+                        <h4>direccion</h4>
+                        <p>Agustinas 676</p>
+                        <p>santiago centro</p>
+                    </div>
+                    <div class="txt">
+                        <h4>horario</h4>
+                        <p>lunes a viernes : 9am - 8pm</p>
+                        <p>sabado y domingo : 11am - 7pm</p>
+                    </div>
+                    <div class="txt">
+                        <h4>telefono</h4>
+                        <p>+569 3847 5938</p>
+                        <p>2 2620 6179</p>
+                    </div>
+                    <div class="txt">
+                        <h4>redes sociales</h4>
+                        <div class="socials">
+                            <a href="https://web.facebook.com/groups/950968136546516?locale=es_LA">
+                                <div class="social">
+                                    <img src="images/s1.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://twitter.com/digitalesps93">
+                                <div class="social">
+                                    <img src="images/s2.svg" alt="">
+                                </div>
+                            </a>
+                            <a href="https://www.instagram.com/juegosdigitalesbaratos.cl/">
+                                <div class="social">
+                                    <img src="images/s3.svg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </section> -->
+    
+        <!-- donde va el mapa -->
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2995.3597421332133!2d-70.64780830206092!3d-33.44087640087059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a1f01de0b3%3A0xbd0b8946a9e25adc!2sAgustinas%20676%2C%208320000%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1715871771112!5m2!1ses-419!2scl" width="100%" height="500" style="border:1px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    
+        <!-- distintos menus -->
+        <footer class="footer  horario">
+            
+                <div class="horario-info container">
+                    <h2>informacion</h2>
+                    <div class="horario-txt">
+                        <div class="txt">
+                            <h4>direccion</h4>
+                            <p>Agustinas 676</p>
+                            <p>santiago centro</p>
+                        </div>
+                        <div class="txt">
+                            <h4>telefono</h4>
+                            <p>+569 3847 5938</p>
+                            <p>2 2620 6179</p>
+                        </div>
+                        <div class="txt">
+                            <h4>redes sociales</h4>
+                            <div class="socials">
+                                <a href="https://web.facebook.com/groups/950968136546516?locale=es_LA">
+                                    <div class="social">
+                                        <img src="images/s1.svg" alt="">
+                                    </div>
+                                </a>
+                                <a href="https://twitter.com/digitalesps93">
+                                    <div class="social">
+                                        <img src="images/s2.svg" alt="">
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/juegosdigitalesbaratos.cl/">
+                                    <div class="social">
+                                        <img src="images/s3.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+        </footer>
+    
+    </body>
+    </html>
+</body>
+</html>
