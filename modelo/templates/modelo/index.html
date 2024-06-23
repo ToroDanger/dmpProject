@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{% static 'css/css.css' %}">
-    <script src="{% static 'js/js.js' %}"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
 </head>
 <body>
@@ -16,10 +17,10 @@
     
             <!-- inicio de nadvar -->
             <div class="menu container" id="inicio">
-                    <img class="logo-1" src="images/LOGOSQLZO.png" alt="">
+                    
                     <input type="checkbox"  id="menu">
                     <label for="menu">
-                        <img src="images/menu.png" class="menu-icono" alt="">
+                        <img  src="{% static 'img/menu.png'%}" class="menu-icono" alt="">
                     </label>
                     <nav class="navbar">
                         <div class="menu-1">
@@ -29,7 +30,7 @@
                                 
                                 <!-- carro de compras -->
                                 <li class="submenu carrito" >
-                                    <img src="images/cart-add-regular-48.png" id="" alt="">
+                                    <img src="{% static 'img/cart-add-regular-48.png'%}"  alt="">
                                     <div id="carrito">
                                         <table id="lista-carrito">
                                             <thead>
@@ -48,7 +49,7 @@
                                 
                             </ul>
                         </div>
-                        <img class="logo-2" src="images/LOGOSQLZO.png" height="100px" alt="">
+                        <img class="logo-2" src="{% static 'img//LOGOSQLZO.png'%}" height="100px" alt="">
                         <div class="menu-2">
                             <ul>
                                 <li><a href="login.html">iniciar sesion</a></li>
@@ -56,17 +57,17 @@
                             <div class="socials">
                                 <a href="https://web.facebook.com/groups/950968136546516?locale=es_LA">
                                     <div class="social">
-                                        <img src="images/s1.svg" alt="">
+                                        <img src="{% static 'img/s1.svg'%}" alt="">
                                     </div>
                                 </a>
                                 <a href="https://twitter.com/digitalesps93">
                                     <div class="social">
-                                        <img src="images/s2.svg" alt="">
+                                        <img src="{% static 'img/s2.svg'%}" alt="">
                                     </div>
                                 </a>
                                 <a href="https://www.instagram.com/juegosdigitalesbaratos.cl/">
                                     <div class="social">
-                                        <img src="images/s3.svg" alt="">
+                                        <img src="{% static 'img/s3.svg'%}" alt="">
                                     </div>
                                 </a>
     
@@ -94,7 +95,7 @@
                                     </div>
                                 </div>
                                     <div class="slider-img">
-                                        <img src="images/sonic.avif"  alt="">
+                                        <img src="{% static 'img/sonic.avif'%}"  alt="">
                                     </div>
                             </div>
                         </div>
@@ -115,7 +116,7 @@
                                     </div>
                                 </div>
                                     <div class="slider-img">
-                                        <img src="images/gta1.jpeg" alt="">
+                                        <img src="{% static 'img/gta1.jpeg'%}" alt="">
                                     </div>
                             </div>
                         </div>
@@ -133,7 +134,7 @@
                                     </div>
                                 </div>
                                     <div class="slider-img">
-                                        <img src="images/cod.avif" height="300px" alt="">
+                                        <img src="{% static 'img/cod.avif'%}" height="300px" alt="">
                                     </div>
                             </div>
                         </div>
@@ -144,176 +145,12 @@
                 </div>
             </div>
         </header>
-    
-        <!-- donde hago las terjetas tipo carusel -->
-        <!-- <main class="products ">
-             <div class=" container">
-    
-                <input type="radio" name="tabs" id="tab1" checked="checked" class="tabInput" value="1">
-                <label for="tab1">hambuerguesa</label>
-                <div class="tab">
-                    <div class="swiper mySwiper-2" id="swiper1">
-                        <div class="swiper-wrapper">
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food1.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>producto</h4>
-                                        <p>calidad premium</p>
-                                        <span class="price">$80.00</span>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food2.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>tusca</h4>
-                                        <p>lorem</p>
-                                        <span class="price">$800.00</span>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food3.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>batman</h4>
-                                        <p>aaaaaaaaaaa</p>
-                                        <span class="price">$60.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
-    
-           
-                <div class="tab">
-                    <div class="swiper mySwiper-2" id="swiper2">
-                        <div class="swiper-wrapper">
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food4.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>producto</h4>
-                                        <p>calidad premium</p>
-                                        <span class="price">$80.00</span>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food5.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>tusca</h4>
-                                        <p>lorem</p>
-                                        <span class="price">$800.00</span>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food6.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>batman</h4>
-                                        <p>aaaaaaaaaaa</p>
-                                        <span class="price">$60.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
-    
-    
-                <div class="tab">
-                    <div class="swiper mySwiper-2" id="swiper3">
-                        <div class="swiper-wrapper">
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food7.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>producto</h4>
-                                        <p>calidad premium</p>
-                                        <span class="price">$80.00</span>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food8.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>tusca</h4>
-                                        <p>lorem</p>
-                                        <span class="price">$800.00</span>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="swiper-slide">
-                                <div class="product">
-                                    <div class="product-img">
-                                        <h4>nuevo</h4>
-                                        <img src="images/food9.png" alt="">
-                                    </div>
-                                    <div class="product-txt">
-                                        <h4>batman</h4>
-                                        <p>aaaaaaaaaaa</p>
-                                        <span class="price">$60.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
-    
-             </div>
-        </main> -->
         
         <!-- donde dejo quienes somos y modal -->
         <section class="info container" id="somos">
     
             <div class="info-img">
-                <img src="images/LOGOSQLZO.png" height="300px" alt="">
+                <img src="{% static 'img/LOGOSQLZO.png'%}" height="300px" alt="">
             </div>
             <div class="info-txt" >
                 <h2>¿quienes somos?</h2>
@@ -345,51 +182,7 @@
             </div>
     
         </section>
-    
-        <!-- donde va la informacion de quienes somos  -->
-        <!-- <section class="horario">
-            <div class="horario-info container">
-                <h2>informacion</h2>
-                <div class="horario-txt">
-                    <div class="txt">
-                        <h4>direccion</h4>
-                        <p>Agustinas 676</p>
-                        <p>santiago centro</p>
-                    </div>
-                    <div class="txt">
-                        <h4>horario</h4>
-                        <p>lunes a viernes : 9am - 8pm</p>
-                        <p>sabado y domingo : 11am - 7pm</p>
-                    </div>
-                    <div class="txt">
-                        <h4>telefono</h4>
-                        <p>+569 3847 5938</p>
-                        <p>2 2620 6179</p>
-                    </div>
-                    <div class="txt">
-                        <h4>redes sociales</h4>
-                        <div class="socials">
-                            <a href="https://web.facebook.com/groups/950968136546516?locale=es_LA">
-                                <div class="social">
-                                    <img src="images/s1.svg" alt="">
-                                </div>
-                            </a>
-                            <a href="https://twitter.com/digitalesps93">
-                                <div class="social">
-                                    <img src="images/s2.svg" alt="">
-                                </div>
-                            </a>
-                            <a href="https://www.instagram.com/juegosdigitalesbaratos.cl/">
-                                <div class="social">
-                                    <img src="images/s3.svg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-    
-                </div>
-            </div>
-        </section> -->
+
     
         <!-- donde va el mapa -->
         <section>
@@ -417,19 +210,20 @@
                             <div class="socials">
                                 <a href="https://web.facebook.com/groups/950968136546516?locale=es_LA">
                                     <div class="social">
-                                        <img src="images/s1.svg" alt="">
+                                        <img src="{% static 'img/s1.svg'%}" alt="">
                                     </div>
                                 </a>
                                 <a href="https://twitter.com/digitalesps93">
                                     <div class="social">
-                                        <img src="images/s2.svg" alt="">
+                                        <img src="{% static 'img/s2.svg'%}" alt="">
                                     </div>
                                 </a>
                                 <a href="https://www.instagram.com/juegosdigitalesbaratos.cl/">
                                     <div class="social">
-                                        <img src="images/s3.svg" alt="">
+                                        <img src="{% static 'img/s3.svg'%}" alt="">
                                     </div>
                                 </a>
+    
                             </div>
                         </div>
         
@@ -437,6 +231,8 @@
                 </div>
         </footer>
     
+        <script src="{% static 'js/js.js'%}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     </body>
     </html>
 </body>
