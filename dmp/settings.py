@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'modelo',
+    'administrador',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +68,9 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_REDIRECT_URL = "menu"
+LOGOUT_REDIRECT_URL = "home"
 
 WSGI_APPLICATION = 'dmp.wsgi.application'
 
