@@ -5,3 +5,11 @@ from django.shortcuts import render
 def index(request):
     context={}
     return render(request,'modelo/index.html',context)
+
+
+# proyecto_django/modelo/views.py
+
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'modelo/index.html')
