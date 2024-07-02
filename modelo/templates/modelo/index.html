@@ -29,10 +29,21 @@
                             <ul>
                                 <li> <a href="#inicio">Inicio</a></li>
                                 <li><a href="#somos">Quienes somos</a></li>
-                                
+                            </ul>
+                        </div>
+                        <img class="logo-2" src="{% static 'img//LOGOSQLZO.png'%}" height="100px" alt="">
+                        <div class="menu-2">
+                            <ul>
+                                <li><a href="{% url 'login'%}">iniciar sesion</a></li>
+                            </ul>
+                            <div class="socials">
+                             
+                           
                                 <!-- carro de compras -->
-                                <li class="submenu carrito" >
-                                    <img src="{% static 'img/cart-add-regular-48.png'%}"  alt="">
+                                <li class="submenu carrito social" >
+                                    <div style="display: flex;">
+                                        <img src="{% static 'img/cart-add-regular-48.png'%}" width="23px" height="27px"  alt="">
+                                    </div>
                                     <div id="carrito">
                                         <table id="lista-carrito">
                                             <thead>
@@ -48,22 +59,6 @@
                                         <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
                                     </div>
                                 </li>
-                                
-                            </ul>
-                        </div>
-                        <img class="logo-2" src="{% static 'img//LOGOSQLZO.png'%}" height="100px" alt="">
-                        <div class="menu-2">
-                            <ul>
-                                <li><a href="{% url 'login'%}">iniciar sesion</a></li>
-                            </ul>
-                            <div class="socials">
-                             
-                           
-                                <a href="https://twitter.com/digitalesps93">
-                                    <div class="social">
-                                        <img src="{% static 'img/s2.svg'%}" alt="">
-                                    </div>
-                                </a>
     
                             </div>
                         </div>

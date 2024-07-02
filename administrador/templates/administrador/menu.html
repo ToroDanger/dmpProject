@@ -12,64 +12,55 @@
    
 </head>
 <body>
-              <!-- inicio de nadvar -->
-              <div class="menu container" id="inicio">
-                    
-                <input type="checkbox"  id="menu">
-                <label for="menu">
-                    <img  src="{% static 'img/menu.png'%}" class="menu-icono" alt="">
-                </label>
-                <nav class="navbar">
-                    <div class="menu-1">
-                        <ul>
-                          {% comment %} aca estoy llamando con include la ruta de la carpeta {% endcomment %}
-                            <li> <a href="{% url 'index' %}">Inicio</a></li>
-                            <li><a href="#somos">Quienes somos</a></li>
-                            
-                            
-                            
-                        </ul>
-                    </div>
-                    {% comment %} <img class="logo-2" src="{% stactic 'img/LOGOSQLZO.png'%}" height="100px" alt=""> {% endcomment %}
-                    <div class="menu-2">
-                      {% if user.is_authenticated %}
-                      {% comment %} {% if usuario != None %} {% endcomment %}
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              {{user.username}}
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                              <a class="dropdown-item" href="{% url 'index' %}">Cerrar Sesion</a>
-                            </div>
-                          
-                      {% else %}
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% url 'login'%}">Login</a>
-                        </li>
-                      {% endif %}
-          
-                      {% if user.is_authenticated %}
-                        <ul>
-                            <li><a href="login.html">{{user.username}}</a></li>
-                        </ul>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="{% url 'logout'%}">Cerrar Sesion</a>
-                        </div>
-                      {% endif %}
-
-                        <div class="socials">
-                         
-                       
-                            <a href="https://twitter.com/digitalesps93">
-                                <div class="social">
-                                    <img src="{% static 'img/s2.svg'%}" alt="">
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                </nav>
-                
-        </div>  
+  <!-- inicio de nadvar -->
+  <div class="menu container" id="inicio">
+    <input type="checkbox"  id="menu">
+    <label for="menu">
+      <img  src="{% static 'img/menu.png'%}" class="menu-icono" alt="">
+    </label>
+    <nav class="navbar">
+      <div class="menu-1">
+        <ul>
+          {% comment %} aca estoy llamando con include la ruta de la carpeta {% endcomment %}
+          <li> <a href="{% url 'index' %}">Inicio</a></li>
+          <li><a href="#somos">Quienes somos</a></li>
+        </ul>
+      </div>
+      {% comment %} <img class="logo-2" src="{% stactic 'img/LOGOSQLZO.png'%}" height="100px" alt=""> {% endcomment %}
+      <div class="menu-2">
+        <li class="nav-item dropdown">
+          {% if user.is_authenticated %}
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            {{user.username}}
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'index' %}">Cerrar Sesion</a>
+          </div>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login'%}">Login</a>
+          </li>
+          {% endif %}
+        </li>
+        {% comment %} {% if usuario != None %} {% endcomment %}
+        {% comment %} {% if user.is_authenticated %}
+        <ul>
+          <li><a href="login.html">{{user.username}}</a></li>
+        </ul>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'logout'%}">Cerrar Sesion</a>
+        </div>
+        {% endif %} {% endcomment %}
+        <div class="socials">
+          <a href="https://twitter.com/digitalesps93">
+            <div class="social">
+              <img src="{% static 'img/s2.svg'%}" alt="">
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>  
 
 
 </body>
