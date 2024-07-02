@@ -6,6 +6,9 @@ def index(request):
     context={}
     return render(request,'modelo/index.html',context)
 
+def juegos(request):
+    return render(request, 'modelo/juegos.html')
+
 
 # proyecto_django/modelo/views.py
 
