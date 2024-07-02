@@ -41,6 +41,62 @@ div#centtro{
     border-radius: 20px;
 }
 
+.card-1 {
+    width: 230px;
+    height: 344px;
+    background-image: linear-gradient(144deg,#8608b4, #492fed 60%,#bd6fda);
+    border: none;
+    border-radius: 40px;
+    padding-top: 10px;
+    position: relative;
+    margin: auto;
+    font-family: inherit;
+  }
+  
+.card-1 span {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 1.3em;
+  }
+  
+.card-1 .job {
+    font-weight: 400;
+    color: white;
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 1em;
+  }
+  
+.card-1 .img {
+    width: 170px;
+    height: 150px;
+    background: #e8e8e8;
+    border-radius: 20%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+.card-1 button {
+    padding: 8px 25px;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+    border: none;
+    margin-top: 30px;
+    background: #e8e8e8;
+    color: #111111;
+    font-weight: 600;
+  }
+  
+.card-1 button:hover {
+    background: #212121;
+    color: #ffffff;
+  }
+
 body {
   background-color: #142850;
   font-family: "Poppins", sans-serif;

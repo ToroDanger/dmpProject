@@ -7,7 +7,8 @@ def index(request):
     return render(request,'modelo/index.html',context)
 
 def juegos(request):
-    return render(request, 'modelo/juegos.html')
+    context={}
+    return render(request,'modelo/juegos.html',context)
 
 
 # proyecto_django/modelo/views.py
