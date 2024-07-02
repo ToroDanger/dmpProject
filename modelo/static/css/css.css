@@ -27,6 +27,13 @@ div#centtro{
     color: #ffffff;
 }
 
+.card-container{
+ 
+    margin-top: 1%;
+    margin-bottom: 5%;
+    display: flex;
+}
+
 .card{
     margin-top: 30px !important;
     margin-left: 50px !important;
@@ -39,18 +46,22 @@ div#centtro{
     color: #ffffff;
     transition: background-color 3s ease;
     border-radius: 20px;
+    
 }
 
 .card-1 {
-    width: 230px;
+    width: 310px;
     height: 344px;
-    background-image: linear-gradient(144deg,#8608b4, #492fed 60%,#bd6fda);
+    background-image: linear-gradient(#142850,#27496D, #27496D,#142850);
     border: none;
-    border-radius: 40px;
+    border-radius: 25px;
     padding-top: 10px;
     position: relative;
+    margin: 10px;
     margin: auto;
+    position: relative;
     font-family: inherit;
+    
   }
   
 .card-1 span {
@@ -72,7 +83,7 @@ div#centtro{
   }
   
 .card-1 .img {
-    width: 170px;
+    width: 220px;
     height: 150px;
     background: #e8e8e8;
     border-radius: 20%;
