@@ -32,6 +32,7 @@ div#centtro{
     margin-top: 1%;
     margin-bottom: 5%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -56,12 +57,9 @@ div#centtro{
     border: none;
     border-radius: 25px;
     padding-top: 10px;
-    position: relative;
-    margin: 10px;
     margin: auto;
     position: relative;
-    font-family: inherit;
-    
+    font-family: inherit; 
   }
   
 .card-1 span {
@@ -525,6 +523,7 @@ div#img-modal{
     .content-modal{
         width: 90%;
     }
+    
 }
 /*:::Fin Ventana Modal:::*/
 
@@ -665,8 +664,6 @@ div#img-modal{
         font-size: 12px;
 
     }
-
-    
 
     .menu{
         padding: 20px;
