@@ -4,7 +4,8 @@ from  . import views
 urlpatterns = [
     path('menu/',views.menu,name='menu'),
     path('home/', views.menu, name='home'),
-    
-]
+    # crud
+    path('crud', views.crud, name='crud'),
+    ]
 
 

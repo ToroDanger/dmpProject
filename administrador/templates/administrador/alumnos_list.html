@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>editar datos de alumnos</h1><br>
+    <br>
+
+    {% comment %} <button type="button">
+        <a href="{% url 'alumnos_add' %}"> agregar</a>
+    </button> {% endcomment %}
+
+    <div id="idmensajes">
+        {% if mensaje %}
+            {{mensaje}}
+        {% endif %}
+    </div>
+
+    <table>
+        {% if administrador%}
+            <th>Nombre</th>    
+            <th>Detalle</th>
+            <th>precio p.</th>
+            <th>Elimniar</th>
+            <th>Modificar</th>
+            {% for x in administrador%}
+                <tr>
+                    <td>{{ x.nombre}}</td>
+                    <td>{{ x.Detalle}}</td>
+                    <td>{{ x.precio}}</td>
+                    {% comment %} <td> <a href="{% url 'alumnos_del'  pk=x.nombre %}">eliminar</a></td> {% endcomment %}
+                    {% comment %} <td> <a href="{% url 'alumnos_findEdit' pk=x.nombre %}">modificar</a></td> {% endcomment %}
+                </tr>
+
+            {% endfor %}
+        {% endif %}
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $(document).ready(function(){
+        $("#idMensaje").delay(2000).fadeOut("slow");
+        })
+    </script>
+
+
+</body>
+</html>

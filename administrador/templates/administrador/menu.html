@@ -24,7 +24,7 @@
         <ul>
           {% comment %} aca estoy llamando con include la ruta de la carpeta {% endcomment %}
           <li> <a href="{% url 'index' %}">Inicio</a></li>
-          <li><a href="#somos">Quienes somos</a></li>
+          <li><a href="{% url 'crud' %}">Quienes somos</a></li>
         </ul>
       </div>
       <img class="logo-2" src="{% static 'img//LOGOSQLZO.png'%}" height="100px" alt="">
