@@ -28,11 +28,9 @@ div#centtro{
 }
 
 .card-container{
- 
+    display: flex;
     margin-top: 1%;
     margin-bottom: 5%;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .card{
@@ -53,7 +51,8 @@ div#centtro{
 .card-1 {
     width: 310px;
     height: 344px;
-    background-image: linear-gradient(#142850,#27496D, #27496D,#142850);
+    background-image: linear-gradient(#142850
+    ,#27496D, #27496D,#142850);
     border: none;
     border-radius: 25px;
     padding-top: 10px;
