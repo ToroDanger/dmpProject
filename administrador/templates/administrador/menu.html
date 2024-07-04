@@ -27,7 +27,7 @@
           <li><a href="#somos">Quienes somos</a></li>
         </ul>
       </div>
-      {% comment %} <img class="logo-2" src="{% stactic 'img/LOGOSQLZO.png'%}" height="100px" alt=""> {% endcomment %}
+      <img class="logo-2" src="{% static 'img//LOGOSQLZO.png'%}" height="100px" alt="">
       <div class="menu-2">
         <li class="nav-item dropdown">
           {% if user.is_authenticated %}
@@ -43,6 +43,7 @@
           </li>
           {% endif %}
         </li>
+        
         {% comment %} {% if usuario != None %} {% endcomment %}
         {% comment %} {% if user.is_authenticated %}
         <ul>
@@ -52,13 +53,25 @@
           <a class="dropdown-item" href="{% url 'logout'%}">Cerrar Sesion</a>
         </div>
         {% endif %} {% endcomment %}
-        <div class="socials">
-          <a href="https://twitter.com/digitalesps93">
-            <div class="social">
-              <img src="{% static 'img/s2.svg'%}" alt="">
+        <li class="submenu carrito social" >
+            <div style="display: flex;">
+                <img src="{% static 'img/cart-add-regular-48.png'%}" width="23px" height="27px"  alt="">
             </div>
-          </a>
-        </div>
+            <div id="carrito">
+                <table id="lista-carrito">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+            </div>
+        </li>
       </div>
     </nav>
   </div>  
@@ -76,7 +89,7 @@
                                 <h2>Superrápido. Superdivertido. ¡Superstars!</h2>
                                 <p class="precio">Recorre las místicas Northstar Islands en la renovación del clásico juego de plataformas 2D de acción a alta velocidad de Sonic. Juega como Sonic</p>
                                 <div class="botones">
-                                    <a href="sonic.html" class="btn-1">Catalogo</a> 
+                                    <a href="{%url 'juegos'%}" class="btn-1">Catalogo</a> 
                                     <a href="#" class="agregar-carrito btn-1" id="lista-1" data-id="1" ><i class='bx bx-cart-add'></i></a>
                                 </div>
                             </div>
@@ -97,7 +110,7 @@
                                 <p>Un joven estafador callejero, un ladrón de bancos retirado y un psicópata aterrador se ven involucrados con lo peor y más desquiciado del mundo criminal.</p>
                                 <div class="botones">
                                   
-                                    <a href="gta.html" class="btn-1">Catalogo</a> 
+                                    <a href="{%url 'juegos'%}" class="btn-1">Catalogo</a> 
                                     <a href="#" class="agregar-carrito btn-1" id="lista-2" data-id="1" ><i class='bx bx-cart-add'></i></a>
                                 </div>
                             </div>
@@ -114,7 +127,7 @@
                                 <p>Sube el nivel de actividad y adéntrate al nuevo mapa, Al Mazrah, con experiencias innovadoras en la jugabilidad que atraen a todo tipo de jugadores.</p>
                                 <div class="botones">
                                     
-                                    <a href="COD.html" class="btn-1">Catalogo</a> 
+                                    <a href="{%url 'juegos'%}" class="btn-1">Catalogo</a> 
                                    <a href="#" class="agregar-carrito btn-1" id="lista-3" data-id="1" > <i class='bx bx-cart-add'></i></a>
                                    <!-- <i class='bx bx-cart-add'></i> -->
                                 </div>
