@@ -18,56 +18,52 @@
             <!-- inicio de nadvar -->
             <div class="menu container" id="inicio">
                     
-                    <input type="checkbox"  id="menu">
-                    <label for="menu">
-                        <img  src="{% static 'img/menu.png'%}" class="menu-icono" alt="">
-                    </label>
-                    <nav class="navbar">
-                        <div class="menu-1">
-                            <ul>
-                                <li> <a href="#inicio">Inicio</a></li>
-                                <li><a href="#somos">Quienes somos</a></li>
-                                
-                                <!-- carro de compras -->
-                                <li class="submenu carrito" >
-                                    <img src="{% static 'img/cart-add-regular-48.png'%}"  alt="">
-                                    <div id="carrito">
-                                        <table id="lista-carrito">
-                                            <thead>
-                                                <tr>
-                                                    <th>Imagen</th>
-                                                    <th>Nombre</th>
-                                                    <th>Precio</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
-                                        <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
-                                    </div>
-                                </li>
-                                
-                            </ul>
+                <input type="checkbox"  id="menu">
+                <label for="menu">
+                    <img  src="{% static 'img/menu.png'%}" class="menu-icono" alt="">
+                </label>
+                <nav class="navbar">
+                    <div class="menu-1">
+                        <ul>
+                            <li> <a href="{%url 'index'%}">Inicio</a></li>
+                            <li><a href="{%url 'juegos'%}">Juegos</a></li>
+                        </ul>
+                    </div>
+                    <img class="logo-2" src="{% static 'img//LOGOSQLZO.png'%}" height="100px" alt="">
+                    <div class="menu-2">
+                        <ul>
+                            <li><a href="{% url 'login'%}">iniciar sesion</a></li>
+                        </ul>
+                        <div class="socials">
+                         
+                       
+                            <!-- carro de compras -->
+                            <li class="submenu carrito social" >
+                                <div style="display: flex;">
+                                    <img src="{% static 'img/cart-add-regular-48.png'%}" width="23px" height="27px"  alt="">
+                                </div>
+                                <div id="carrito">
+                                    <table id="lista-carrito">
+                                        <thead>
+                                            <tr>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                    <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                                </div>
+                            </li>
+
                         </div>
-                        <img class="logo-2" src="{% static 'img//LOGOSQLZO.png'%}" height="100px" alt="">
-                        <div class="menu-2">
-                            <ul>
-                                <li><a href="login.html">iniciar sesion</a></li>
-                            </ul>
-                            <div class="socials">
-                             
-                           
-                                <a href="https://twitter.com/digitalesps93">
-                                    <div class="social">
-                                        <img src="{% static 'img/s2.svg'%}" alt="">
-                                    </div>
-                                </a>
-    
-                            </div>
-                        </div>
-                    </nav>
-                    
-            </div>  
+                    </div>
+                </nav>
+                
+        </div>  
+       
         </header>
 
         <div style="margin-top:10%; text-align: center; color: aliceblue;">
