@@ -4,8 +4,13 @@ from  . import views
 urlpatterns = [
     path('menu/',views.menu,name='menu'),
     path('home/', views.menu, name='home'),
+
     # crud
     path('crud', views.crud, name='crud'),
+    path('alumnos_del/<str:pk>', views.alumnos_del, name='alumnos_del'),
+    # path('alumnosAdd', views.alumnosAdd, name='alumnosAdd'),
+    path('alumnos_findEdit/<str:pk>', views.alumnos_findEdit, name='alumnos_findEdit'),
+
     ]
 
 
