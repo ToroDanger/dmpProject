@@ -605,7 +605,7 @@ div#img-modal{
     z-index: 1;
     background-color: #77777797;
     padding: 20px;
-    min-width: 400px;
+    min-width: 200px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
