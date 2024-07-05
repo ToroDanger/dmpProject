@@ -26,17 +26,14 @@
           <form action="" method="post">
             {% csrf_token%} 
 
-            <pre>nombre <input type="text" name="rut"></pre>
-            <pre>detalle <input type="text" name="nombre"></pre>
-            <pre>precio <input type="text" name="apaterno"></pre>
-           
-                {% for genero in generos %}
-                <option value="{{genero.id_genero}}">{{genero.genero}}</option>
+            <pre>nombre <input type="text" name="nombre"></pre>
+            <pre>detalle <input type="text" name="detalle"></pre>
+            <pre>precio <input type="text" name="precio"></pre>
+            <select name="x">
+                {% for x in Compra %}
+                <option value="{{x.nombre}}">{{x.nombre}}</option>
                 {% endfor %}
             </select></pre>
-            <pre>Celular: <input type="number" name="telefono" minlength="9"></pre>
-            <pre>Email : <input type="email" name="email"></pre>
-            <pre>Direccion: <input type="text" name="direccion"></pre>
 
             <input type="submit" value="Agregar">
 

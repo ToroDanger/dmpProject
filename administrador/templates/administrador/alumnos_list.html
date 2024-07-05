@@ -12,9 +12,9 @@
     <h1>editar datos de alumnos</h1><br>
     <br>
 
-    {% comment %} <button type="button">
-        <a href="{% url 'alumnos_add' %}"> agregar</a>
-    </button>  {% endcomment %}
+    <button type="button">
+        <a href="{% url 'alumnosAdd' %}"> agregar</a>
+    </button>  
 
     <div id="idmensajes">
         {% if mensaje %}
@@ -31,11 +31,11 @@
             <th>Modificar</th>
             {% for x in administrador%}
                 <tr>
-                    <td>{{ x.nombre}}</td>
+                    <td>{{ x.Nombre}}</td>
                     <td>{{ x.Detalle}}</td>
-                    <td>{{ x.precio}}</td>
-                    <td> <a href="{% url 'alumnos_del'  pk=x.nombre %}">eliminar</a></td>
-                    <td> <a href="{% url 'alumnos_findEdit' pk=x.nombre %}">modificar</a></td>
+                    <td>{{ x.Precio}}</td>
+                    <td> <a href="{% url 'alumnos_del'  pk=x.Nombre %}">eliminar</a></td>
+                    <td> <a href="{% url 'alumnos_findEdit' pk=x.Nombre %}">modificar</a></td>
                 </tr>
 
             {% endfor %}

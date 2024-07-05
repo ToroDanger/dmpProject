@@ -7,10 +7,14 @@ urlpatterns = [
 
     # crud
     path('crud', views.crud, name='crud'),
+    path('juego', views.juego, name='juego'),
     path('alumnos_del/<str:pk>', views.alumnos_del, name='alumnos_del'),
-    # path('alumnosAdd', views.alumnosAdd, name='alumnosAdd'),
+    path('alumnosAdd', views.alumnosAdd, name='alumnosAdd'),
     path('alumnos_findEdit/<str:pk>', views.alumnos_findEdit, name='alumnos_findEdit'),
 
     ]
+
+
+
 
 

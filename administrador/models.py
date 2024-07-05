@@ -7,9 +7,9 @@ class DMPPROJECT:
     pass
 
 class Compra(models.Model):
-    nombre  = models.CharField(primary_key=True, max_length=20)
+    Nombre  = models.CharField(primary_key=True, max_length=20)
     Detalle = models.CharField(max_length=20)
-    precio = models.CharField(max_length=20)
+    Precio = models.CharField(max_length=20)
     
     def _str_(self):
         return str(self.nombre)

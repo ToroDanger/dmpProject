@@ -13,14 +13,42 @@ def menu(request):
     context={'usuario':usuario}
     return render(request, 'administrador/menu.html', context)
 
-def home(request):
+def juego(request):
     context={}
-    return render(request, 'administrador/home.html', context)
+    return render(request, 'administrador/juego.html', context)
 
 def crud(request):
     administrador = Compra.objects.all()
     context= {"administrador": administrador}
     return render(request, 'administrador/alumnos_list.html', context)
+
+
+
+def alumnosAdd(request):
+    if request.method != "POST":
+        administrador = Compra.objects.all()
+        context = {"administrador": administrador}
+        return render(request, 'administrador/alumnos_add.html', context)
+    else:
+        nombre = request.POST["nombre"]
+        detalle = request.POST["detalle"]
+        precio = request.POST["precio"]
+
+
+      
+        compra = Compra.objects.create(
+            Nombre=nombre,
+            Detalle=detalle,
+            Precio=precio
+        )
+        compra.save()
+        context = {'mensaje': "OK, datos grabados..."}
+        return render(request, 'administrador/alumnos_add.html', context)
+    
+
+    
+
+
 
 
     # no se sabe si esta completo
