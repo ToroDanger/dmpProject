@@ -14,7 +14,7 @@
 
     {% comment %} <button type="button">
         <a href="{% url 'alumnos_add' %}"> agregar</a>
-    </button> {% endcomment %}
+    </button>  {% endcomment %}
 
     <div id="idmensajes">
         {% if mensaje %}
@@ -26,16 +26,16 @@
         {% if administrador%}
             <th>Nombre</th>    
             <th>Detalle</th>
-            <th>precio p.</th>
-            <th>Elimniar</th>
+            <th>precio</th>
+            <th>Eliminar</th>
             <th>Modificar</th>
             {% for x in administrador%}
                 <tr>
                     <td>{{ x.nombre}}</td>
                     <td>{{ x.Detalle}}</td>
                     <td>{{ x.precio}}</td>
-                    {% comment %} <td> <a href="{% url 'alumnos_del'  pk=x.nombre %}">eliminar</a></td> {% endcomment %}
-                    {% comment %} <td> <a href="{% url 'alumnos_findEdit' pk=x.nombre %}">modificar</a></td> {% endcomment %}
+                    <td> <a href="{% url 'alumnos_del'  pk=x.nombre %}">eliminar</a></td>
+                    <td> <a href="{% url 'alumnos_findEdit' pk=x.nombre %}">modificar</a></td>
                 </tr>
 
             {% endfor %}
