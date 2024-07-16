@@ -25,18 +25,16 @@
 
     <table>
         {% if administrador%}
-            <th class="th">Nombre</th>    
-            <th class="th">Detalle</th>
-            <th class="th">precio</th>
-            <th class="th">Eliminar</th>
-            <th class="th">Modificar</th>
+            <th class="th-1">Nombre</th>    
+            <th class="th-1">Detalle</th>
+            <th class="th-1">precio</th>
+            <th class="th-1">Eliminar</th>
             {% for x in administrador%}
                 <tr>
                     <td>{{ x.Nombre}}</td>
                     <td>{{ x.Detalle}}</td>
                     <td>{{ x.Precio}}</td>
                     <td> <a href="{% url 'alumnos_del'  pk=x.Nombre %}">eliminar</a></td>
-                    <td> <a href="{% url 'alumnos_findEdit' pk=x.Nombre %}">modificar</a></td>
                 </tr>
 
             {% endfor %}

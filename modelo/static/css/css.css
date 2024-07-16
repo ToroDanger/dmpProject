@@ -656,8 +656,8 @@ div#img-modal{
 .btn-3:hover{
     background-color: #ef8700;
 }
-.th{
-    background-color: #0C7B93;
+.th-1{
+    background-color: #0C7B93 !important;
 }
 
 @media(max-width: 750px){
