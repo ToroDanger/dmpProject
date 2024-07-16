@@ -5,11 +5,12 @@
     {% load static %}
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/css.css' %}">
     <title>Document</title>
 </head>
 <body>
     
-    <h1>editar datos de alumnos</h1><br>
+    <h1>Carrito de Compras</h1><br>
     <br>
 
     <button type="button">
@@ -24,11 +25,11 @@
 
     <table>
         {% if administrador%}
-            <th>Nombre</th>    
-            <th>Detalle</th>
-            <th>precio</th>
-            <th>Eliminar</th>
-            <th>Modificar</th>
+            <th class="th">Nombre</th>    
+            <th class="th">Detalle</th>
+            <th class="th">precio</th>
+            <th class="th">Eliminar</th>
+            <th class="th">Modificar</th>
             {% for x in administrador%}
                 <tr>
                     <td>{{ x.Nombre}}</td>

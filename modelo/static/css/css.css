@@ -51,7 +51,7 @@ div#centtro{
 .card-1 {
     width: 310px;
     height: 344px;
-    background-image: linear-gradient(red
+    background-image: linear-gradient(#142850
     ,#27496D, #27496D,#142850);
     border: none;
     border-radius: 25px;
@@ -655,6 +655,9 @@ div#img-modal{
 
 .btn-3:hover{
     background-color: #ef8700;
+}
+.th{
+    background-color: #0C7B93;
 }
 
 @media(max-width: 750px){
