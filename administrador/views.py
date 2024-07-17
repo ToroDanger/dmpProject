@@ -84,3 +84,6 @@ def alumnos_findEdit (request, pk):
        context={'mensaje':"error, nombre no existe"}
        return render(request, 'administrador/alumnos_edit.html', context)
 
+def perfil(request):
+    context= {}
+    return render(request, 'administrador/perfil.html', context)
