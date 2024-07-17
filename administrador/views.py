@@ -87,3 +87,7 @@ def alumnos_findEdit (request, pk):
 def perfil(request):
     context= {}
     return render(request, 'administrador/perfil.html', context)
+
+def modificar(request):
+    context= {}
+    return render(request, 'administrador/modificar.html', context)

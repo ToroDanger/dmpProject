@@ -12,6 +12,7 @@ urlpatterns = [
     path('alumnosAdd', views.alumnosAdd, name='alumnosAdd'),
     path('alumnos_findEdit/<str:pk>', views.alumnos_findEdit, name='alumnos_findEdit'),
     path('perfil', views.perfil, name='perfil'),
+    path('modificar', views.modificar, name='modificar'),
     ]
 
 

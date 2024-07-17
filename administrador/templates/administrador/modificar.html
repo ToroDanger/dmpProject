@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/css.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-   
+    <title>Document</title>
 </head>
 <body>
-    <header>
+    header>
   <!-- inicio de nadvar -->
         <div class="menu container" id="inicio">
             <input type="checkbox"  id="menu">
@@ -68,78 +67,47 @@
             </nav>
         </div>  
     </header>
-
-    <section class="info container">
-
-        <div class="">
-            <img src="{% static 'img/LOGO_PERFIL.png'%}" height="300px" alt="">
-        </div>
-        <div style=" color: aliceblue; margin-left: 10%; text-align: left;" >
-            <br><br>
-            <h2>Datos Personales</h2><br>
-            <h6>Nombre Usuario:</h6>
-            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6>
-
-            <h6>Nombre:</h6>
-            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6>
-
-            <h6>Apellido:</h6>
-            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6>
-
-            <h6>Correo:</h6>
-            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6><br>
-                <!--Boton-->
-                <a href="{%url 'modificar'%}" class="btn-1">Modificar Perfil</a>
-           
-                    
-        </div>
-
-    </section>
-
-
-    <!-- distintos menus -->
+    
     <footer class="footer  horario">
         
-            <div class="horario-info container">
-                <h2>informacion</h2>
-                <div class="horario-txt">
-                    <div class="txt">
-                        <h4>direccion</h4>
-                        <p>Agustinas 676</p>
-                        <p>santiago centro</p>
+        <div class="horario-info container">
+            <h2>informacion</h2>
+            <div class="horario-txt">
+                <div class="txt">
+                    <h4>direccion</h4>
+                    <p>Agustinas 676</p>
+                    <p>santiago centro</p>
+                </div>
+                <div class="txt">
+                    <h4>telefono</h4>
+                    <p>+569 3847 5938</p>
+                    <p>2 2620 6179</p>
+                </div>
+                <div class="txt">
+                    <h4>redes sociales</h4>
+                    <div class="socials">
+                        <a href="https://web.facebook.com/groups/950968136546516?locale=es_LA">
+                            <div class="social">
+                                <img src="{% static 'img/s1.svg'%}" alt="">
+                            </div>
+                        </a>
+                        <a href="https://twitter.com/digitalesps93">
+                            <div class="social">
+                                <img src="{% static 'img/s2.svg'%}" alt="">
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/juegosdigitalesbaratos.cl/">
+                            <div class="social">
+                                <img src="{% static 'img/s3.svg'%}" alt="">
+                            </div>
+                        </a>
                     </div>
-                    <div class="txt">
-                        <h4>telefono</h4>
-                        <p>+569 3847 5938</p>
-                        <p>2 2620 6179</p>
-                    </div>
-                    <div class="txt">
-                        <h4>redes sociales</h4>
-                        <div class="socials">
-                            <a href="https://web.facebook.com/groups/950968136546516?locale=es_LA">
-                                <div class="social">
-                                    <img src="{% static 'img/s1.svg'%}" alt="">
-                                </div>
-                            </a>
-                            <a href="https://twitter.com/digitalesps93">
-                                <div class="social">
-                                    <img src="{% static 'img/s2.svg'%}" alt="">
-                                </div>
-                            </a>
-                            <a href="https://www.instagram.com/juegosdigitalesbaratos.cl/">
-                                <div class="social">
-                                    <img src="{% static 'img/s3.svg'%}" alt="">
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-    
                 </div>
             </div>
-    </footer>
+        </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="{% static 'js/js.js'%}"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="{% static 'js/js.js'%}"></script>
 </body>
 </html>
