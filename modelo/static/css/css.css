@@ -658,10 +658,11 @@ div#img-modal{
 }
 .th-1{
     border-radius: 10%;
-    background-color:#0C7B93 transparent;
+    background-color:#0C7B93 ;
     border: #0d0d0d;
     color: #ffffff;
-    
+    margin-left: 10px;
+
 }
 
 @media(max-width: 750px){
