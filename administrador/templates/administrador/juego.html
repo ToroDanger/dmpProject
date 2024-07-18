@@ -12,8 +12,6 @@
     <title>Document</title>
 </head>
 <body>
-
-    <body>
         <!-- nabvaer y carusel -->
         <header>
             <!-- inicio de nadvar -->
@@ -48,28 +46,28 @@
                           </li>
                       </div>
                       <li class="submenu carrito social" style="width: 60px;">
-                          <div style="display: flex;">
-                              <img src="{% static 'img/carrito.png'%}" width="50px" height="27px" style="display:flex ;" alt="">
-                          </div>
-                          <div id="carrito">
-                              <table id="lista-carrito">
-                                  <thead>
-                                      <tr>
-                                          <th>Imagen</th>
-                                          <th>Nombre</th>
-                                          <th>Precio</th>
-                                          <th></th>
-                                      </tr>
-                                  </thead>
-                                  <tbody></tbody>
-                              </table>
-                              <a href="{% url 'crud' %}" class="btn-3">Ir al carrito</a>
-                              <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
-                          </div>
-                      </li>
+                        <div style="display: flex;">
+                            <img src="{% static 'img/carrito.png'%}" width="50px" height="27px" style="display:flex ;" alt="">
+                        </div>
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="{% url 'crud' %}" class="btn-3">Ir al carrito</a>
+                            <a href="#" id="vaciar-carrito" class="btn-3">Vaciar Carrito</a>
+                            </div>
+                        </li>
                       </nav>
                   </div>  
-              </header>
+</header>
 
         <div style="margin-top:10%; text-align: center; color: aliceblue;">
             <h1>Juegos Disponibles:</h1><br>
@@ -245,8 +243,5 @@
 
         <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
         <script src="{% static 'js/js.js'%}"></script>
-        
-    </body>
-    </html>
 </body>
 </html>

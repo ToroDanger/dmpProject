@@ -12,8 +12,8 @@
     <title>Document</title>
 </head>
 <body>
-    header>
-  <!-- inicio de nadvar -->
+    <header>
+        <!-- inicio de nadvar -->
         <div class="menu container" id="inicio">
             <input type="checkbox"  id="menu">
             <label for="menu">
@@ -68,15 +68,36 @@
         </div>  
     </header>
 
-    <div id="general">
-        <h1 style="margin-top: 15%; color: aliceblue;">Modificar Perfil</h1>
-        <br>
+    <h1>Carrito de Compras</h1><br>
+    <br>
 
-        <table>
-            <h1 style="color: aliceblue;">NOMBRE</h1>
-            <h1 style="color: aliceblue;">CONTRASEÑA</h1>
-        </table>
+    <button type="button">
+        <a href="{% url 'alumnosAdd' %}"> agregar</a>
+    </button>  
+
+    <div id="idmensajes">
+        {% if mensaje %}
+            {{mensaje}}
+        {% endif %}
     </div>
+
+    <table style="margin-bottom: 20%;">
+        {% if administrador%}
+            <th class="th-1">Nombre</th>    
+            <th class="th-1">Detalle</th>
+            <th class="th-1">precio</th>
+            <th class="th-1">Eliminar</th>
+            {% for x in administrador%}
+                <tr>
+                    <td>{{ x.Nombre}}</td>
+                    <td>{{ x.Detalle}}</td>
+                    <td>{{ x.Precio}}</td>
+                    <td> <a href="{% url 'alumnos_del'  pk=x.Nombre %}">eliminar</a>
+                </tr>
+
+            {% endfor %}
+        {% endif %}
+    </table>
     
     <footer class="footer  horario">
         
@@ -115,9 +136,9 @@
                 </div>
             </div>
         </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="{% static 'js/js.js'%}"></script>
+    </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="{% static 'js/js.js'%}"></script>
 </body>
 </html>
