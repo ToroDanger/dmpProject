@@ -13,6 +13,7 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="button-L">Entrar</button>
+        <a href="{%url 'index'%}" class="button-A">Inicio</a>
     </form>
   
 </body>
