@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from modelo.models import DMPPROJECT
 from .models import Compra
+from django.contrib.auth.models import User
 
 def mi_vista(request):
     objetos = MiModelo.objects.all()
@@ -91,3 +92,18 @@ def perfil(request):
 def modificar(request):
     context= {}
     return render(request, 'administrador/modificar.html', context)
+
+def registrar(request):
+    if request.method != "POST":
+        context={"clase": "registro"}
+        return render(request, 'administrador/registrar.html', context)
+    else:
+        nombre = request.POST["nombre"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+
+        user = User.objects.create_user(nombre, email, password)
+        user.save()
+        context={"clase": "registro", "mensaje":"Los datos fueron registrados"}
+        return render(request, 'administrador/registrar.html', context)
+    

@@ -13,6 +13,7 @@ urlpatterns = [
     path('alumnos_findEdit/<str:pk>', views.alumnos_findEdit, name='alumnos_findEdit'),
     path('perfil', views.perfil, name='perfil'),
     path('modificar', views.modificar, name='modificar'),
+    path('registrar', views.registrar, name='registrar'),
     ]
 
 
