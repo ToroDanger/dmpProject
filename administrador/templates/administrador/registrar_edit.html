@@ -1,0 +1,14 @@
+def modificar(request):
+    if request.method != "POST":
+        context={"clase": "registro"}
+        return render(request, 'administrador/modificar.html', context)
+    else:
+        nombre = request.POST["nombre"]
+        email = request.POST["email"]
+        last_name = request.POST["last_name"]
+        first_name = request.POST["first_name"]
+
+        user = User.objects.create_user(nombre, email, last_name,first_name)
+        user.save()
+        context={"clase": "registro", "mensaje":"Los datos fueron registrados"}
+        return render(request, 'administ 

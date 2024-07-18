@@ -71,26 +71,55 @@
           </header>
     
     <div style="margin-top: 10%; text-align: center;">
-        <h1 style="color: aliceblue;">Modificar </h1><br>
-    <br>
-        <table style="margin-left: 42%; margin-bottom: 10%;">
-            {% if administrador%}
-                <th class="th-1">Nombre</th>    
-                <th class="th-1">Detalle</th>
-                <th class="th-1">precio</th>
-                <th class="th-1">Eliminar</th>
-                {% for x in administrador%}
-                    <tr>
-                        <td>{{ x.Nombre}}</td>
-                        <td>{{ x.Detalle}}</td>
-                        <td>{{ x.Precio}}</td>
-                        <td> <a href="{% url 'alumnos_del'  pk=x.Nombre %}">eliminar</a></td>
-                    </tr>
+        <h1 style="color: aliceblue;">Modificar </h1>
 
+    <section class="info container">
+
+        <div class="">
+            <img src="{% static 'img/LOGO_PERFIL.png'%}" height="300px" alt="">
+        </div>
+        <div style=" color: aliceblue; margin-left: 10%; text-align: left;" >
+            <br><br>
+            <h2>Datos Personales</h2><br>
+            <h6>Nombre Usuario:</h6>
+            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6>
+
+            <h6>Nombre:</h6>
+            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.first_name}}</h6>
+
+            <h6>Apellido:</h6>
+            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.last_name}}</h6>
+
+            <h6>Correo:</h6>
+            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.email}}</h6><br>
+                <!--Boton-->
+                <a href="{%url 'modificar'%}" class="btn-1">Modificar Perfil</a>
+           
+                    
+        </div>
+
+    </section>
+{% comment %} 
+        <table style="margin-left: 42%; margin-bottom: 10%;">
+            {% if user%}
+                <th class="th-1">Usuario</th>    
+                <th class="th-1">Nombre</th>
+                <th class="th-1">Apellido</th>
+                <th class="th-1">Email</th>
+                {% for x in user%}
+                    <tr>
+                        <td>{{ x.username}}</td>
+                        <td>{{ x.first_name}}</td>
+                        <td>{{ x.last_name}}</td>
+                        <td>{{ x.email}}</td>
+                        
+                        {% comment %} <td> <a href="{% url 'alumnos_del'  pk=x.Nombre %}">eliminar</a></td> {% endcomment %}
+                    </tr>
+{% comment %} 
                 {% endfor %}
             {% endif %}
         </table>
-    </div>
+    </div> {% endcomment %}
 
     <footer class="footer  horario">
         

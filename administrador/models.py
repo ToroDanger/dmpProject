@@ -13,3 +13,5 @@ class Compra(models.Model):
     
     def _str_(self):
         return str(self.nombre)
+    
+

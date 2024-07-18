@@ -89,9 +89,46 @@ def perfil(request):
     context= {}
     return render(request, 'administrador/perfil.html', context)
 
+# def modificar(request):
+#     if request.method != "POST":
+#         context={"clase": "registro"}
+#         return render(request, 'administrador/modificar.html', context)
+#     else:
+#         nombre = request.POST["nombre"]
+#         email = request.POST["email"]
+#         last_name = request.POST["last_name"]
+#         first_name = request.POST["first_name"]
+
+#         user = User.objects.create_user(nombre, email, last_name,first_name)
+#         user.save()
+#         context={"clase": "registro", "mensaje":"Los datos fueron registrados"}
+#         return render(request, 'administrador/modificar.html', context)
+    
 def modificar(request):
-    context= {}
-    return render(request, 'administrador/modificar.html', context)
+    if request.method == "POST":
+        nombre = request.POST["nombre"]
+        email = request.POST["email"]
+        first_name = request.POST["first_name"]
+        last_name = request.POST["last_name"]
+        
+
+        user = User.objects.get(nombre, email, first_name,last_name)
+        user.nombre = nombre()
+        user.first_name = first_name
+        user.first_name = last_name
+        user.email = email
+            
+        user.save()
+
+        context = {
+            'mensaje': "Datos actualizados",
+            'user': user}
+            return render(request, 'administrador/modificar.html', context)
+    else:
+            user = user.objects.all()
+            context = {'user': user}
+            return render(request, 'administrador/modificar.html', context)
+    
 
 def registrar(request):
     if request.method != "POST":
