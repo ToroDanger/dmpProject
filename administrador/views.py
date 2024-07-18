@@ -113,21 +113,21 @@ def modificar(request):
         
 
         user = User.objects.get(nombre, email, first_name,last_name)
-        user.nombre = nombre()
+        user.username = nombre
         user.first_name = first_name
-        user.first_name = last_name
+        user.last_name = last_name
         user.email = email
             
         user.save()
 
         context = {
             'mensaje': "Datos actualizados",
-            'user': user}
-            return render(request, 'administrador/modificar.html', context)
+            'user': nombre}
+        return render(request, 'administrador/modificar.html', context)
     else:
-            user = user.objects.all()
-            context = {'user': user}
-            return render(request, 'administrador/modificar.html', context)
+        user = User.objects.all()
+        context = {'user': user}
+        return render(request, 'administrador/modificar.html', context)
     
 
 def registrar(request):
@@ -135,11 +135,15 @@ def registrar(request):
         context={"clase": "registro"}
         return render(request, 'administrador/registrar.html', context)
     else:
-        nombre = request.POST["nombre"]
+        nombre = request.POST["usernombre"]
+        last_name = request.POST["last_name"]
+        first_name = request.POST["first_name"]
         email = request.POST["email"]
         password = request.POST["password"]
 
-        user = User.objects.create_user(nombre, email, password)
+        user = User.objects.create_user(nombre,email, password)
+        user.last_name = last_name
+        user.first_name = first_name
         user.save()
         context={"clase": "registro", "mensaje":"Los datos fueron registrados"}
         return render(request, 'administrador/registrar.html', context)
