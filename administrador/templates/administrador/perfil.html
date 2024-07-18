@@ -35,7 +35,7 @@
                     {{user.username}}
                 </a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{% url 'index' %}">Ver Perfil</a>
+                    <a class="dropdown-item" href="{% url 'perfil' %}">Ver Perfil</a>
                     <a class="dropdown-item" href="{% url 'index' %}">Cerrar Sesion</a>
                 </div>
                 {% else %}
@@ -81,13 +81,13 @@
             <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6>
 
             <h6>Nombre:</h6>
-            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6>
+            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.first_name}}</h6>
 
             <h6>Apellido:</h6>
-            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6>
+            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.last_name}}</h6>
 
             <h6>Correo:</h6>
-            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.username}}</h6><br>
+            <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.email}}</h6><br>
                 <!--Boton-->
                 <a href="{%url 'modificar'%}" class="btn-1">Modificar Perfil</a>
            
