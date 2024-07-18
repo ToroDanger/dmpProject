@@ -68,7 +68,7 @@ p{
     color: #fff;
     cursor: pointer;
     transition: background-color 3s ease;
-    margin-left: 40%;
+    margin-left: 20%;
     margin-top: 0%;
 }
 .button-B{
@@ -77,10 +77,10 @@ p{
     border: solid 2px #00A8CC;
     border-radius: 20px;
     padding: 10px 20px;
-    color: #fff;
+    color: #fff !important;
     cursor: pointer;
     transition: background-color 3s ease;
-    margin-left: 40%;
+    margin-left: 10%;
     margin-top: 0%;
 }
 

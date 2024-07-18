@@ -12,8 +12,10 @@
     <form  method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="button-L">Entrar</button>
-        <button type="" class="button-L"><a href="{%url 'index'%}" >Registrar</a></button>
+        <section>
+            <button type="submit" class="button-L">Entrar</button>
+            <button type="" class="button-B"><a href="{%url 'index'%}"style="color: #fff;"  >Registrar</a></button>
+        </section>
     </form>
   
 </body>
