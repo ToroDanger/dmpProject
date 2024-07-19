@@ -73,8 +73,10 @@
 
             <h6>Correo:</h6>
             <h6 style="background-color: #27496D; border-radius: 10px; width: 250px; height: 30px;">{{user.email}}</h6><br>
-                <!--Boton-->
-                <a href="{%url 'modificar'%}" class="btn-1">Modificar Perfil</a>
+              <!--Boton-->
+              <a class="btn-1" href="{% url 'alumnos_findEdit' pk=user.username%}"><button class="btn btn-success"
+                >Modificar</button></a>
+    
            
                     
         </div>

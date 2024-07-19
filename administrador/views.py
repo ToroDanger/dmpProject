@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from modelo.models import DMPPROJECT
 from .models import Compra
 from django.contrib.auth.models import User
@@ -89,31 +89,20 @@ def perfil(request):
     context= {}
     return render(request, 'administrador/perfil.html', context)
 
-# def modificar(request):
-#     if request.method != "POST":
-#         context={"clase": "registro"}
-#         return render(request, 'administrador/modificar.html', context)
-#     else:
-#         nombre = request.POST["nombre"]
-#         email = request.POST["email"]
-#         last_name = request.POST["last_name"]
-#         first_name = request.POST["first_name"]
 
-#         user = User.objects.create_user(nombre, email, last_name,first_name)
-#         user.save()
-#         context={"clase": "registro", "mensaje":"Los datos fueron registrados"}
-#         return render(request, 'administrador/modificar.html', context)
-    
-def modificar(request):
+def modificar(request, pk):
+    user = get_object_or_404(User, username=pk)
+    print(f"Username: {user.username}")
+
     if request.method == "POST":
-        nombre = request.POST["nombre"]
+
+        username = request.POST["username"]
         email = request.POST["email"]
         first_name = request.POST["first_name"]
         last_name = request.POST["last_name"]
         
-
-        user = User.objects.get(nombre, email, first_name,last_name)
-        user.username = nombre
+       
+        user.username = username
         user.first_name = first_name
         user.last_name = last_name
         user.email = email
@@ -121,15 +110,14 @@ def modificar(request):
         user.save()
 
         context = {
-            'mensaje': "Datos actualizados",
-            'user': nombre}
+             
+            'user': username}
         return render(request, 'administrador/modificar.html', context)
     else:
-        user = User.objects.all()
+        
         context = {'user': user}
         return render(request, 'administrador/modificar.html', context)
     
-
 def registrar(request):
     if request.method != "POST":
         context={"clase": "registro"}
@@ -147,4 +135,18 @@ def registrar(request):
         user.save()
         context={"clase": "registro", "mensaje":"Los datos fueron registrados"}
         return render(request, 'administrador/registrar.html', context)
-    
+
+
+def alumnos_findEdit(request, pk):
+    if pk:
+        try:
+            user = User.objects.get(username=pk)  # Busca al usuario por nombre de usuario
+            context = {"user": user}
+            return render(request, 'administrador/modificar.html', context)
+        except User.DoesNotExist:
+            context = {"mensaje": "Error, no existe el nombre de usuario."}
+            return render(request, 'administrador/modificar.html', context)
+    else:
+        context = {"mensaje": "Error, no se proporcionó un nombre de usuario válido."}
+        return render(request, 'administrador/modificar.html', context)
+
