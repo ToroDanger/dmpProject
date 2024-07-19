@@ -8,6 +8,19 @@
   list-style: none;
 }
 
+.button-B{
+    background-color: transparent;
+    outline: none;
+    border: solid 2px #00A8CC;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff !important;
+    cursor: pointer;
+    transition: background-color 3s ease;
+    margin-left: 10%;
+    margin-top: 0%;
+}
+
 div#general{
     margin:auto;
     background-color: #142850;  
@@ -661,8 +674,8 @@ div#img-modal{
     background-color:#0C7B93 ;
     border: #0d0d0d;
     color: #ffffff;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 100%;
+    margin-right: 100px;
 
 }
 

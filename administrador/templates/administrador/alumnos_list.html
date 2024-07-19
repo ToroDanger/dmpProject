@@ -50,27 +50,27 @@
                   </nav>
               </div>  
           </header>
+
+|   
     
     <div style="margin-top: 10%; text-align: center;">
         <h1 style="color: aliceblue;">Carrito de Compras</h1><br>
     <br>
-        <table style="margin-left: 42%; margin-bottom: 10%;">
-            {% if administrador%}
-                <th class="th-1">Nombre</th>    
-                <th class="th-1">Detalle</th>
-                <th class="th-1">precio</th>
-                <th class="th-1">Eliminar</th>
-                {% for x in administrador%}
+        <table id="carrito-lista" style="margin-left: 40%; margin-bottom: 10%;">
+            
                     <tr>
-                        <td>{{ x.Nombre}}</td>
-                        <td>{{ x.Detalle}}</td>
-                        <td>{{ x.Precio}}</td>
-                        <td> <a href="{% url 'alumnos_del'  pk=x.Nombre %}">eliminar</a></td>
+                        <th class="th-1">Nombre</th>
+                        <th class="th-1">precio</th>
+                        
                     </tr>
-
-                {% endfor %}
-            {% endif %}
+                <tbody>
+                    
+                </tbody>
         </table>
+    <div>
+        <button class="btn-3" id="vaciar-carrito" style="margin-top:-1000px">Vaciar Carrito</button>
+        <button class="btn-3" style="margin-top:-1000px">Pagar</button>
+    </div>
     </div>
 
     <footer class="footer  horario">
@@ -114,7 +114,7 @@
         </div>
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="{% static 'js/js.js'%}"></script>
+    <script src="{% static 'js/carrito.js'%}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
