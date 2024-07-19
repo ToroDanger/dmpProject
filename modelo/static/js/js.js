@@ -206,7 +206,6 @@ function agregarAlCarrito(juegoId) {
         return;
     }
 
-    // Actualiza los selectores para coincidir con las clases en tu HTML
     const nombreElement = card.querySelector('span');
     const precioElement = card.querySelector('p.job');
 
@@ -224,7 +223,7 @@ function agregarAlCarrito(juegoId) {
     console.log(`Nombre del juego: ${nombre}`);
     console.log(`Precio del juego: ${precio}`);
     
-    // Si hay un elemento para detalle, se agrega opcionalmente
+    
     const detalleElement = card.querySelector('.detalle');
     const detalle = detalleElement ? detalleElement.textContent.trim() : '';
     
