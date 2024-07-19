@@ -45,3 +45,4 @@ function vaciarCarrito() {
     location.reload(); 
 }
 
+
